@@ -22,7 +22,7 @@ public class MavenUploader implements Uploader {
     @Override
     public void uploadToRepository(Path pathToUpload) {
         try (Stream<Path> files = Files.walk(pathToUpload)){
-            files.filter(pomFilePredictor).forEach(mavenDeployer::deployPom);
+            files.filter(pomFilePredictor).forEach(mavenDeployer::deployArtifact);
         } catch (IOException e) {
             throw new UncheckedIOException(e);
         }

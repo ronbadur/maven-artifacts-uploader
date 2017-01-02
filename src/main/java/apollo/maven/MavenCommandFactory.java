@@ -7,31 +7,46 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
 
 public class MavenCommandFactory {
 
-    private List<String> commandOptions;
+    private List<MavenCommand> mavenCommands = new ArrayList<>();
     private static final String MAVEN_DEPLOY_COMMAND = "mvn deploy:deploy-file ";
 
-    public String createPomDeployCommand(Path pathToPom){
-        initialCommandOptionsList();
-        commandOptions.set(0, commandOptions.get(0) + pathToPom.toString());
-        commandOptions.set(1, commandOptions.get(1) + getJarPathThatMatchToPom(pathToPom));
-        String deployCommand = commandOptions.stream().reduce((first, second) -> first + " " + second).get();
-        return MAVEN_DEPLOY_COMMAND + deployCommand;
+    public MavenCommandFactory() {
+       initialMavenCommandsList();
     }
 
-    public String createSourcesDeployCommand(Path pathToPom){
-        return "";
+    public List<Optional<String>> getMavenDeployCommandsForArtifact(Path pathToPom){
+        return mavenCommands.stream().map(currCommand -> currCommand.getCommand(pathToPom)).collect(Collectors.toList());
     }
 
-    private void initialCommandOptionsList(){
-        commandOptions = new ArrayList<>();
-        commandOptions.add("-DpomFile=");
-        commandOptions.add("-Dfile=");
-        commandOptions.add("-DrepositoryId=maven-releases");
-        commandOptions.add("-Durl=http://localhost:8081/repository/maven-releases/");
+    private void initialMavenCommandsList(){
+        mavenCommands.add(new PomDeployCommand());
+        mavenCommands.add(new SourcesDeployCommand());
     }
+
+//    public String createPomDeployCommand(Path pathToPom){
+//        initialCommandOptionsList();
+//        commandOptions.set(0, commandOptions.get(0) + pathToPom.toString());
+//        commandOptions.set(1, commandOptions.get(1) + getJarPathThatMatchToPom(pathToPom));
+//        String deployCommand = commandOptions.stream().reduce((first, second) -> first + " " + second).get();
+//        return MAVEN_DEPLOY_COMMAND + deployCommand;
+//    }
+//
+//    public String createSourcesDeployCommand(Path pathToPom){
+//        return "";
+//    }
+//
+//    private void initialCommandOptionsList(){
+//        commandOptions = new ArrayList<>();
+//        commandOptions.add("-DpomFile=");
+//        commandOptions.add("-Dfile=");
+//        commandOptions.add("-DrepositoryId=maven-releases");
+//        commandOptions.add("-Durl=http://localhost:8081/repository/maven-releases/");
+//    }
 
     private String getJarPathThatMatchToPom(Path pathToPom){
         String fileName = FilenameUtils.getName(pathToPom.getFileName().toString());
