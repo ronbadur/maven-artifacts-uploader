@@ -1,5 +1,7 @@
 package apollo.maven;
 
+import com.google.inject.Inject;
+
 import java.io.IOException;
 import java.io.UncheckedIOException;
 import java.nio.file.Path;
@@ -8,7 +10,12 @@ import java.util.Optional;
 
 public class MavenDeployer {
 
-    private MavenCommandFactory mavenCommandFactory = new MavenCommandFactory();
+    private final MavenCommandFactory mavenCommandFactory;
+
+    @Inject
+    public MavenDeployer(MavenCommandFactory mavenCommandFactory) {
+        this.mavenCommandFactory = mavenCommandFactory;
+    }
 
     public void deployArtifact(Path pathToPom) {
         List<Optional<String>> mavenDeployCommandsForArtifact = mavenCommandFactory.getMavenDeployCommandsForArtifact(pathToPom);

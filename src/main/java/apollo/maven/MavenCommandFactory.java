@@ -12,11 +12,11 @@ import java.util.stream.Collectors;
 
 public class MavenCommandFactory {
 
-    private List<MavenCommand> mavenCommands = new ArrayList<>();
+    private final List<MavenCommand> mavenCommands;
     private static final String MAVEN_DEPLOY_COMMAND = "mvn deploy:deploy-file ";
 
-    public MavenCommandFactory() {
-       initialMavenCommandsList();
+    public MavenCommandFactory(List<MavenCommand> mavenCommands) {
+        this.mavenCommands = mavenCommands;
     }
 
     public List<Optional<String>> getMavenDeployCommandsForArtifact(Path pathToPom){
