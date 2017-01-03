@@ -10,6 +10,8 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+import static java.util.stream.Collectors.toList;
+
 public class MavenCommandFactory {
 
     private final List<MavenCommand> mavenCommands;
@@ -20,12 +22,7 @@ public class MavenCommandFactory {
     }
 
     public List<Optional<String>> getMavenDeployCommandsForArtifact(Path pathToPom){
-        return mavenCommands.stream().map(currCommand -> currCommand.getCommand(pathToPom)).collect(Collectors.toList());
-    }
-
-    private void initialMavenCommandsList(){
-        mavenCommands.add(new PomDeployCommand());
-        mavenCommands.add(new SourcesDeployCommand());
+        return mavenCommands.stream().map(currCommand -> currCommand.getCommand(pathToPom)).collect(toList());
     }
 
 //    public String createPomDeployCommand(Path pathToPom){

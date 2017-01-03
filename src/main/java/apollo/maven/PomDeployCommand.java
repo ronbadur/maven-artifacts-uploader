@@ -7,6 +7,8 @@ public class PomDeployCommand implements MavenCommand {
 
     @Override
     public Optional<String> getCommand(Path pathToPom) {
+        Optional<String> pomDeployCommand = Optional.empty();
+
         return null;
     }
 }
