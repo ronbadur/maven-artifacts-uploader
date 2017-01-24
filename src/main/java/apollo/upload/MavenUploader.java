@@ -2,6 +2,7 @@ package apollo.upload;
 
 import apollo.maven.MavenDeployer;
 import apollo.predicators.PomFilePredictor;
+import com.google.inject.Inject;
 
 import java.io.IOException;
 import java.io.UncheckedIOException;
@@ -14,6 +15,7 @@ public class MavenUploader implements Uploader {
     private final PomFilePredictor pomFilePredictor;
     private final MavenDeployer mavenDeployer;
 
+    @Inject
     public MavenUploader(PomFilePredictor pomFilePredictor, MavenDeployer mavenDeployer) {
         this.pomFilePredictor = pomFilePredictor;
         this.mavenDeployer = mavenDeployer;
