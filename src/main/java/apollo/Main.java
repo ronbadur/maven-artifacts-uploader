@@ -14,6 +14,6 @@ public class Main {
     public static void main(String[] args) throws MavenInvocationException {
         Injector injector = Guice.createInjector(new MavenModule(), new MavenCommandOptionsModule());
         Uploader uploader = injector.getInstance(Uploader.class);
-        uploader.uploadToRepository(Paths.get("C:\\tmp\\repo"));
+        uploader.uploadToRepository(Paths.get("C:\\Users\\Ron\\.m2\\check"));
     }
 }

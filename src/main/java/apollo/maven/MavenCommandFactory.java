@@ -1,10 +1,8 @@
 package apollo.maven;
 
-import apollo.deploy_options.PomDeployOption;
 import com.google.inject.Inject;
 
 import java.nio.file.Path;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
