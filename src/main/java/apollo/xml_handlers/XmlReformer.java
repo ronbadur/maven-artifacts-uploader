@@ -9,27 +9,30 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.Transformer;
-import javax.xml.transform.TransformerConfigurationException;
 import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import java.io.*;
 import java.nio.file.Path;
-import java.util.List;
 
 public class XmlReformer {
 
     private final XmlTagsRemover xmlTagsRemover;
+    private final XmlTagChanger xmlTagChanger;
 
     @Inject
-    public XmlReformer(XmlTagsRemover xmlTagsRemover) {
+    public XmlReformer(XmlTagsRemover xmlTagsRemover, XmlTagChanger xmlTagChanger) {
         this.xmlTagsRemover = xmlTagsRemover;
+        this.xmlTagChanger = xmlTagChanger;
     }
 
     public void prepareXmlToDeploy(Path pathToXml){
         Element rootXmlElement = createRootXmlElement(pathToXml);
+
         xmlTagsRemover.removeTags(rootXmlElement);
+        xmlTagChanger.changeTag(rootXmlElement);
+
         writeXmlChanges(rootXmlElement, pathToXml);
     }
 
