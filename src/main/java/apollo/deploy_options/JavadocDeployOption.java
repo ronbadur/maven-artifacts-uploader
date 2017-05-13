@@ -1,6 +1,6 @@
 package apollo.deploy_options;
 
-import apollo.maven.MavenCommand;
+import apollo.maven.MavenDeployOption;
 import com.google.inject.Inject;
 import com.google.inject.name.Named;
 
@@ -9,7 +9,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Optional;
 
-public class JavadocDeployOption implements MavenCommand {
+public class JavadocDeployOption implements MavenDeployOption {
 
     private final String javadocOption;
 
@@ -19,7 +19,7 @@ public class JavadocDeployOption implements MavenCommand {
     }
 
     @Override
-    public Optional<String> getCommand(Path pathToPom) {
+    public Optional<String> getCommandOption(Path pathToPom) {
         Optional<String> javadocOptional = Optional.empty();
 
         if (Files.exists(getJavadocPath(pathToPom))){

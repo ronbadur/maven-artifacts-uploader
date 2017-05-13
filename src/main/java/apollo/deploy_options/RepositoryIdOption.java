@@ -1,13 +1,13 @@
 package apollo.deploy_options;
 
-import apollo.maven.MavenCommand;
+import apollo.maven.MavenDeployOption;
 import com.google.inject.Inject;
 import com.google.inject.name.Named;
 
 import java.nio.file.Path;
 import java.util.Optional;
 
-public class RepositoryIdOption implements MavenCommand {
+public class RepositoryIdOption implements MavenDeployOption {
 
     private final String repositoryIdOption;
 
@@ -17,7 +17,7 @@ public class RepositoryIdOption implements MavenCommand {
     }
 
     @Override
-    public Optional<String> getCommand(Path pathToPom) {
+    public Optional<String> getCommandOption(Path pathToPom) {
         return Optional.of(repositoryIdOption);
     }
 }

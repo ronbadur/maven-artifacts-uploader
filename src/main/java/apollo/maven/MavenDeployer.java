@@ -8,8 +8,6 @@ import org.apache.maven.shared.invoker.MavenInvocationException;
 
 import java.nio.file.Path;
 import java.util.Collections;
-import java.util.List;
-import java.util.Optional;
 
 public class MavenDeployer {
 
@@ -23,10 +21,10 @@ public class MavenDeployer {
     }
 
     public void deployArtifact(Path pathToPom) {
-        List<Optional<String>> mavenDeployCommandsForArtifact = mavenCommandFactory.getMavenDeployCommandsForArtifact(pathToPom);
-        Optional<Optional<String>> reduce = mavenDeployCommandsForArtifact.stream().filter(Optional::isPresent).reduce((x, y) -> Optional.of(x.get() + " " + y.get()));
+        String commandToExecute = mavenCommandFactory.getMavenDeployCommand(pathToPom);
         InvocationRequest invocationRequest = new DefaultInvocationRequest();
-        invocationRequest.setGoals(Collections.singletonList("deploy:deploy-file " + reduce.get().get()));
+        invocationRequest.setGoals(Collections.singletonList(commandToExecute));
+
         try {
             invoker.execute(invocationRequest);
         } catch (MavenInvocationException e) {

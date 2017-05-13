@@ -25,7 +25,7 @@ public class PomDeployOptionTest {
         File tmpFolder = temporaryFolder.newFolder("test");
         File tmpPom = temporaryFolder.newFile(Paths.get(tmpFolder.getName()).resolve("tmpPom.pom").toString());
 
-        Optional<String> command = pomDeployOption.getCommand(tmpPom.toPath());
+        Optional<String> command = pomDeployOption.getCommandOption(tmpPom.toPath());
 
         assertThat(command.get(), is(pomOption + tmpPom.toString()));
     }
@@ -37,7 +37,7 @@ public class PomDeployOptionTest {
         File tmpJar = temporaryFolder.newFile(Paths.get(tmpFolder.getName()).resolve("tmpFile.jar").toString());
         File tmpJavadoc = temporaryFolder.newFile(Paths.get(tmpFolder.getName()).resolve("tmpFile-javadoc.jar").toString());
 
-        Optional<String> command = pomDeployOption.getCommand(tmpPom.toPath());
+        Optional<String> command = pomDeployOption.getCommandOption(tmpPom.toPath());
 
         assertThat(command.get(), is(pomOption + tmpPom.toString()));
     }

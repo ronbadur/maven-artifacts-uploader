@@ -26,7 +26,7 @@ public class SourcesDeployOptionTest {
         File tmpFolder = temporaryFolder.newFolder("test");
         File tmpPom = temporaryFolder.newFile(Paths.get(tmpFolder.getName()).resolve("tmpPom.pom").toString());
 
-        Optional<String> command = sourcesDeployOption.getCommand(tmpPom.toPath());
+        Optional<String> command = sourcesDeployOption.getCommandOption(tmpPom.toPath());
 
         assertThat(command.isPresent(), is(false));
     }
@@ -37,7 +37,7 @@ public class SourcesDeployOptionTest {
         File tmpPom = temporaryFolder.newFile(Paths.get(tmpFolder.getName()).resolve("tmpPom.pom").toString());
         File tmpSources = temporaryFolder.newFile(Paths.get(tmpFolder.getName()).resolve("tmpPom-sources.jar").toString());
 
-        Optional<String> command = sourcesDeployOption.getCommand(tmpPom.toPath());
+        Optional<String> command = sourcesDeployOption.getCommandOption(tmpPom.toPath());
 
         assertThat(command.get(), is(sourcesOption + tmpSources.toString()));
     }

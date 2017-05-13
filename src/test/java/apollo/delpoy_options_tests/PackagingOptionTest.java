@@ -1,6 +1,5 @@
 package apollo.delpoy_options_tests;
 
-import apollo.deploy_options.FileDeployOption;
 import apollo.deploy_options.PackagingOption;
 import org.hamcrest.Matchers;
 import org.junit.Rule;
@@ -26,7 +25,7 @@ public class PackagingOptionTest {
         File tmpFolder = temporaryFolder.newFolder("test");
         File tmpPom = temporaryFolder.newFile(Paths.get(tmpFolder.getName()).resolve("tmpPom.pom").toString());
 
-        Optional<String> command = packagingDeployOption.getCommand(tmpPom.toPath());
+        Optional<String> command = packagingDeployOption.getCommandOption(tmpPom.toPath());
 
         assertThat(command.get(), Matchers.is(packagingOption));
 
@@ -38,7 +37,7 @@ public class PackagingOptionTest {
         File tmpPom = temporaryFolder.newFile(Paths.get(tmpFolder.getName()).resolve("tmpFile.pom").toString());
         File tmpJar = temporaryFolder.newFile(Paths.get(tmpFolder.getName()).resolve("tmpFile.jar").toString());
 
-        Optional<String> command = packagingDeployOption.getCommand(tmpPom.toPath());
+        Optional<String> command = packagingDeployOption.getCommandOption(tmpPom.toPath());
 
         assertThat(command.isPresent(), Matchers.is(false));
 

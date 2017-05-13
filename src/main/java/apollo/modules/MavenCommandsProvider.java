@@ -1,15 +1,14 @@
 package apollo.modules;
 
 import apollo.deploy_options.*;
-import apollo.maven.MavenCommand;
+import apollo.maven.MavenDeployOption;
 import com.google.inject.Inject;
 import com.google.inject.Provider;
 
-import java.rmi.server.UnicastRemoteObject;
 import java.util.Arrays;
 import java.util.List;
 
-public class MavenCommandsProvider implements Provider<List<MavenCommand>> {
+public class MavenCommandsProvider implements Provider<List<MavenDeployOption>> {
 
     private final PomDeployOption pomDeployOption;
     private final FileDeployOption fileDeployOption;
@@ -31,7 +30,7 @@ public class MavenCommandsProvider implements Provider<List<MavenCommand>> {
     }
 
     @Override
-    public List<MavenCommand> get() {
+    public List<MavenDeployOption> get() {
         return Arrays.asList(pomDeployOption, fileDeployOption, repositoryIdOption, urlDeployOption, packagingOption, sourcesDeployOption, javadocDeployOption);
     }
 }

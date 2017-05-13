@@ -4,7 +4,7 @@ import java.nio.file.Path;
 import java.util.Optional;
 
 @FunctionalInterface
-public interface MavenCommand {
+public interface MavenDeployOption {
 
-    Optional<String> getCommand(Path pathToPom);
+    Optional<String> getCommandOption(Path pathToPom);
 }

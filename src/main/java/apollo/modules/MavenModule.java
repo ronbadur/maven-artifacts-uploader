@@ -1,6 +1,6 @@
 package apollo.modules;
 
-import apollo.maven.MavenCommand;
+import apollo.maven.MavenDeployOption;
 import apollo.upload.MavenUploader;
 import apollo.upload.Uploader;
 import com.google.inject.AbstractModule;
@@ -15,7 +15,7 @@ public class MavenModule extends AbstractModule {
     @Override
     protected void configure() {
         bind(Uploader.class).to(MavenUploader.class);
-        bind(new TypeLiteral<List<MavenCommand>>(){}).toProvider(MavenCommandsProvider.class);
+        bind(new TypeLiteral<List<MavenDeployOption>>(){}).toProvider(MavenCommandsProvider.class);
         bind(Invoker.class).to(DefaultInvoker.class);
     }
 }

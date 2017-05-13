@@ -23,7 +23,7 @@ public class UrlDeployOptionTest {
     public void correctUrl() throws Exception {
         File tmpPom = temporaryFolder.newFile("tmpPom");
 
-        Optional<String> command = urlDeployOption.getCommand(tmpPom.toPath());
+        Optional<String> command = urlDeployOption.getCommandOption(tmpPom.toPath());
 
         assertThat(command.get(), is(urlOption));
     }

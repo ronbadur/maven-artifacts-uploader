@@ -25,7 +25,7 @@ public class FileDeployOptionTest {
         File tmpFolder = temporaryFolder.newFolder("test");
         File tmpPom = temporaryFolder.newFile(Paths.get(tmpFolder.getName()).resolve("tmpPom.pom").toString());
 
-        Optional<String> command = fileDeployOption.getCommand(tmpPom.toPath());
+        Optional<String> command = fileDeployOption.getCommandOption(tmpPom.toPath());
 
         assertThat(command.get(), Matchers.is(fileOption + tmpPom.toString()));
     }
@@ -36,7 +36,7 @@ public class FileDeployOptionTest {
         File tmpPom = temporaryFolder.newFile(Paths.get(tmpFolder.getName()).resolve("tmpFile.pom").toString());
         File tmpJar = temporaryFolder.newFile(Paths.get(tmpFolder.getName()).resolve("tmpFile.jar").toString());
 
-        Optional<String> command = fileDeployOption.getCommand(tmpPom.toPath());
+        Optional<String> command = fileDeployOption.getCommandOption(tmpPom.toPath());
 
         assertThat(command.get(), Matchers.is(fileOption + tmpJar.toString()));
     }
@@ -47,7 +47,7 @@ public class FileDeployOptionTest {
         File tmpPom = temporaryFolder.newFile(Paths.get(tmpFolder.getName()).resolve("tmpFile.pom").toString());
         File tmpSha1 = temporaryFolder.newFile(Paths.get(tmpFolder.getName()).resolve("tmpFile.jar.sha1").toString());
 
-        Optional<String> command = fileDeployOption.getCommand(tmpPom.toPath());
+        Optional<String> command = fileDeployOption.getCommandOption(tmpPom.toPath());
 
         assertThat(command.get(), Matchers.is(fileOption + tmpPom.toString()));
     }

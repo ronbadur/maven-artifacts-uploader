@@ -5,18 +5,24 @@ import com.google.inject.Inject;
 import java.nio.file.Path;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 public class MavenCommandFactory {
 
-    private final List<MavenCommand> mavenCommands;
+    private final List<MavenDeployOption> mavenDeployOptions;
 
     @Inject
-    public MavenCommandFactory(List<MavenCommand> mavenCommands) {
-        this.mavenCommands = mavenCommands;
+    public MavenCommandFactory(List<MavenDeployOption> mavenDeployOptions) {
+        this.mavenDeployOptions = mavenDeployOptions;
     }
 
-    public List<Optional<String>> getMavenDeployCommandsForArtifact(Path pathToPom){
-        return mavenCommands.stream().map(currCommand -> currCommand.getCommand(pathToPom)).collect(Collectors.toList());
+    public String getMavenDeployCommand(Path pathToPom){
+        StringBuilder mavenDeployCommand = new StringBuilder("deploy:deploy-file ");
+
+        for (MavenDeployOption currOption : mavenDeployOptions){
+            Optional<String> commandOption = currOption.getCommandOption(pathToPom);
+            commandOption.ifPresent(option -> mavenDeployCommand.append(option).append(" "));
+        }
+
+        return mavenDeployCommand.toString();
     }
 }

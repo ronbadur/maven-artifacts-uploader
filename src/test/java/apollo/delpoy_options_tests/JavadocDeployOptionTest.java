@@ -26,7 +26,7 @@ public class JavadocDeployOptionTest {
         File tmpFolder = temporaryFolder.newFolder("test");
         File tmpPom = temporaryFolder.newFile(Paths.get(tmpFolder.getName()).resolve("tmpPom.pom").toString());
 
-        Optional<String> command = javadocDeployOption.getCommand(tmpPom.toPath());
+        Optional<String> command = javadocDeployOption.getCommandOption(tmpPom.toPath());
 
         assertThat(command.isPresent(), is(false));
     }
@@ -37,7 +37,7 @@ public class JavadocDeployOptionTest {
         File tmpPom = temporaryFolder.newFile(Paths.get(tmpFolder.getName()).resolve("tmpPom.pom").toString());
         File tmpJavadoc = temporaryFolder.newFile(Paths.get(tmpFolder.getName()).resolve("tmpPom-javadoc.jar").toString());
 
-        Optional<String> command = javadocDeployOption.getCommand(tmpPom.toPath());
+        Optional<String> command = javadocDeployOption.getCommandOption(tmpPom.toPath());
 
         assertThat(command.get(), is(javadocOption + tmpJavadoc.toString()));
     }
