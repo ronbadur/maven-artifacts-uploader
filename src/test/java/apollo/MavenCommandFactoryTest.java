@@ -26,6 +26,7 @@ public class MavenCommandFactoryTest {
     private MavenDeployOption javadocOption = Mockito.mock(JavadocDeployOption.class);
     private MavenDeployOption sourcesOption = Mockito.mock(SourcesDeployOption.class);
     private MavenCommandFactory mavenCommandFactory;
+    private final String deployStartCommand = "deploy:deploy-file ";
 
     @Rule
     public TemporaryFolder temporaryFolder = new TemporaryFolder();
@@ -45,7 +46,7 @@ public class MavenCommandFactoryTest {
     @Test
     public void allOptionalsPresents() throws Exception {
         mavenCommandFactory = new MavenCommandFactory(Arrays.asList(pomFileOption, fileOption,
-                                                                    repositoryIdOption, urlOption));
+                                                                    repositoryIdOption, urlOption), deployStartCommand);
         File tmpPom = temporaryFolder.newFile("test.pom");
 
         String deployCommand = mavenCommandFactory.getMavenDeployCommand(tmpPom.toPath());
@@ -57,7 +58,7 @@ public class MavenCommandFactoryTest {
     public void someOptionalsNotPresent() throws Exception {
         mavenCommandFactory = new MavenCommandFactory(Arrays.asList(pomFileOption, fileOption,
                                                                     repositoryIdOption, urlOption,
-                                                                    javadocOption, sourcesOption));
+                                                                    javadocOption, sourcesOption), deployStartCommand);
         File tmpPom = temporaryFolder.newFile("test.pom");
 
         String deployCommand = mavenCommandFactory.getMavenDeployCommand(tmpPom.toPath());
