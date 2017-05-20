@@ -13,5 +13,6 @@ public class XmlModule extends AbstractModule {
         bind(new TypeLiteral<List<String>>(){}).toProvider(TagsToRemoveProvider.class);
         bind(String.class).annotatedWith(Names.named("tagToChange")).toInstance("packaging");
         bind(String.class).annotatedWith(Names.named("newValue")).toInstance("jar");
+        bind(String.class).annotatedWith(Names.named("oldValue")).toInstance("bundle");
     }
 }
