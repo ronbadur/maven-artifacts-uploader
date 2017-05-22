@@ -32,7 +32,7 @@ public class MavenDeployer {
     public void deployArtifact(Path pathToPom) {
         String commandToExecute = mavenCommandFactory.getMavenDeployCommand(pathToPom);
         GAV gav = gavFactory.createGAV(pathToPom);
-        logger.info("Executing command - " + commandToExecute);
+        logger.debug("Executing command - " + commandToExecute);
         invocationRequest.setGoals(Collections.singletonList(commandToExecute));
 
         try {

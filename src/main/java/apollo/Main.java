@@ -17,10 +17,10 @@ public class Main {
     private static final Logger logger = LogManager.getLogger(Main.class);
 
     public static void main(String[] args) throws MavenInvocationException {
-        logger.info("Welcome To Maven Artifacts Uploader!");
+        logger.info("Welcome To Maven Artifacts Uploader");
         Injector injector = Guice.createInjector(new MavenModule(), new MavenCommandOptionsModule(), new XmlModule());
         Uploader uploader = injector.getInstance(Uploader.class);
         uploader.uploadToRepository(Paths.get("C:\\Users\\Ron\\.m2\\check"));
-        logger.info("Uploading done...");
+        logger.info("Done to upload all the artifacts!");
     }
 }
