@@ -1,6 +1,5 @@
 package apollo.upload;
 
-import apollo.Main;
 import apollo.maven.MavenDeployer;
 import apollo.predicators.PomFilePredictor;
 import apollo.xml_handlers.XmlReformer;
@@ -19,7 +18,7 @@ public class MavenUploader implements Uploader {
     private final PomFilePredictor pomFilePredictor;
     private final MavenDeployer mavenDeployer;
     private final XmlReformer xmlReformer;
-    private static final Logger logger = LogManager.getLogger(Main.class);
+    private static final Logger logger = LogManager.getLogger(MavenUploader.class);
 
     @Inject
     public MavenUploader(PomFilePredictor pomFilePredictor, MavenDeployer mavenDeployer, XmlReformer xmlReformer) {

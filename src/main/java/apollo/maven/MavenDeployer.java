@@ -1,6 +1,5 @@
 package apollo.maven;
 
-import apollo.Main;
 import com.google.inject.Inject;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -18,7 +17,7 @@ public class MavenDeployer {
     private final InvocationRequest invocationRequest;
     private final Invoker invoker;
     private final GAVFactory gavFactory;
-    private static final Logger logger = LogManager.getLogger(Main.class);
+    private static final Logger logger = LogManager.getLogger(MavenDeployer.class);
 
     @Inject
     public MavenDeployer(MavenCommandFactory mavenCommandFactory, InvocationRequest invocationRequest,

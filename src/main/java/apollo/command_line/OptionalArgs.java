@@ -12,7 +12,4 @@ public class OptionalArgs {
         return pathToArtifacts;
     }
 
-    public void setPathToArtifacts(String pathToArtifacts) {
-        this.pathToArtifacts = pathToArtifacts;
-    }
 }
