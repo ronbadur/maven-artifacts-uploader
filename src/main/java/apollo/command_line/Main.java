@@ -19,12 +19,18 @@ public class Main {
 
     public static void main(String[] args) {
         OptionalArgs optionalArgs = new OptionalArgs();
-        JCommander.newBuilder().addObject(optionalArgs).build().parse(args);
+        JCommander jCommander = JCommander.newBuilder().addObject(optionalArgs).build();
+        jCommander.setProgramName("mvnUploader");
+        jCommander.parse(args);
 
-        logger.info("Welcome To Maven Artifacts Uploader");
-        Injector injector = Guice.createInjector(new MavenModule(), new MavenCommandOptionsModule(), new XmlModule());
-        Uploader uploader = injector.getInstance(Uploader.class);
-        uploader.uploadToRepository(Paths.get(optionalArgs.getPathToArtifacts()));
-        logger.info("Done to upload all the artifacts!");
+        if (optionalArgs.isHelp()){
+            jCommander.usage();
+        } else {
+            logger.info("Welcome To Maven Artifacts Uploader");
+            Injector injector = Guice.createInjector(new MavenModule(), new MavenCommandOptionsModule(), new XmlModule());
+            Uploader uploader = injector.getInstance(Uploader.class);
+            uploader.uploadToRepository(Paths.get(optionalArgs.getPathToArtifacts()));
+            logger.info("Done to upload all the artifacts!");
+        }
     }
 }

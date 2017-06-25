@@ -29,6 +29,8 @@
                                     </manifestEntries>
                                 </transformer>
                             </transformers>
+                            <finalName>${project.artifactId}</finalName>
+                            <outputDirectory>lib/</outputDirectory>
                         </configuration>
                     </execution>
                 </executions>

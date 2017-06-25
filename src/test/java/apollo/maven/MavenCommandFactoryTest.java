@@ -1,4 +1,4 @@
-package apollo;
+package apollo.maven;
 
 import apollo.deploy_options.*;
 import apollo.maven.MavenCommandFactory;
