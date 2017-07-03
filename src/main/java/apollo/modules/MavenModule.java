@@ -1,5 +1,6 @@
 package apollo.modules;
 
+import apollo.command_line.OptionalArgs;
 import apollo.maven.MavenDeployOption;
 import apollo.upload.MavenUploader;
 import apollo.upload.Uploader;
@@ -23,5 +24,6 @@ public class MavenModule extends AbstractModule {
         bind(Invoker.class).to(DefaultInvoker.class);
         bind(InvocationRequest.class).toProvider(InvocationRequestProvider.class);
         bind(String.class).annotatedWith(Names.named("deploy-start-command")).toInstance("deploy:deploy-file -q ");
+        bind(OptionalArgs.class).asEagerSingleton();
     }
 }

@@ -23,4 +23,9 @@ public class GAV {
     public String getVersion() {
         return version;
     }
+
+    @Override
+    public String toString() {
+        return groupId + ":" + artifactId + ":" + version;
+    }
 }

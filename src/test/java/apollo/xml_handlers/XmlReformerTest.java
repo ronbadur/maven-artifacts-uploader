@@ -14,7 +14,8 @@ public class XmlReformerTest {
 
     private XmlTagsRemover xmlTagsRemover = Mockito.mock(XmlTagsRemover.class);
     private XmlTagChanger xmlTagChanger = Mockito.mock(XmlTagChanger.class);
-    private XmlReformer xmlReformer = new XmlReformer(xmlTagsRemover, xmlTagChanger);
+    private XmlElementFactory xmlElementFactory = Mockito.mock(XmlElementFactory.class);
+    private XmlReformer xmlReformer = new XmlReformer(xmlTagsRemover, xmlTagChanger, xmlElementFactory);
 
     @Rule
     public TemporaryFolder temporaryFolder = new TemporaryFolder();

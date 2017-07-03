@@ -20,34 +20,22 @@ public class XmlReformer {
 
     private final XmlTagsRemover xmlTagsRemover;
     private final XmlTagChanger xmlTagChanger;
+    private final XmlElementFactory xmlElementFactory;
 
     @Inject
-    public XmlReformer(XmlTagsRemover xmlTagsRemover, XmlTagChanger xmlTagChanger) {
+    public XmlReformer(XmlTagsRemover xmlTagsRemover, XmlTagChanger xmlTagChanger, XmlElementFactory xmlElementFactory) {
         this.xmlTagsRemover = xmlTagsRemover;
         this.xmlTagChanger = xmlTagChanger;
+        this.xmlElementFactory = xmlElementFactory;
     }
 
     public void prepareXmlToDeploy(Path pathToXml){
-        Element rootXmlElement = createRootXmlElement(pathToXml);
+        Element rootXmlElement = xmlElementFactory.createRootXmlElement(pathToXml);
 
         xmlTagsRemover.removeTags(rootXmlElement);
         xmlTagChanger.changeTag(rootXmlElement);
 
         writeXmlChanges(rootXmlElement, pathToXml);
-    }
-
-    private Element createRootXmlElement(Path pathToXml){
-        Document document = null;
-
-        try{
-            DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
-            DocumentBuilder documentBuilder = documentBuilderFactory.newDocumentBuilder();
-            document = documentBuilder.parse(pathToXml.toFile());
-        }  catch (ParserConfigurationException | IOException | SAXException e) {
-            e.printStackTrace();
-        }
-
-        return document.getDocumentElement();
     }
 
     private void writeXmlChanges(Element xmlRootElement, Path pathToXml) {

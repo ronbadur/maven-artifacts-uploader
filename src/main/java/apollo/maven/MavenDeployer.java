@@ -38,11 +38,9 @@ public class MavenDeployer {
             InvocationResult invocationResult = invoker.execute(invocationRequest);
 
             if (invocationResult.getExitCode() != 0){
-                logger.error("some error occurred while uploading " + gav.getArtifactId() + "-"
-                               + gav.getVersion() + "because " +
-                               invocationResult.getExecutionException().getMessage());
+                logger.info("failed to upload - " + gav.toString());
             } else {
-                logger.info(gav.getArtifactId() + "-" + gav.getVersion() + " uploaded successfully");
+                logger.info(gav.toString() + " uploaded successfully");
             }
         } catch (MavenInvocationException e) {
             logger.error(e.getMessage(), e);
