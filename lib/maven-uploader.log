@@ -1,14 +1,9 @@
-2017-07-03 23:49:12.650 [main] INFO  apollo.command_line.Main - Welcome To Maven Artifacts Uploader
-2017-07-03 23:49:12.658 [main] INFO  apollo.upload.MavenUploader - Starting to upload artifacts from C:\Users\Ron\.m2\check
-2017-07-03 23:49:15.608 [main] INFO  apollo.maven.MavenDeployer - antlr:antlr:2.7.2 uploaded successfully
-2017-07-03 23:49:18.337 [main] INFO  apollo.maven.MavenDeployer - antlr:antlr:2.7.7 uploaded successfully
-2017-07-03 23:49:21.858 [main] INFO  apollo.maven.MavenDeployer - aopalliance:aopalliance:1.0 uploaded successfully
-2017-07-03 23:49:24.489 [main] INFO  apollo.maven.MavenDeployer - asm:asm:3.2 uploaded successfully
-2017-07-03 23:49:27.169 [main] INFO  apollo.maven.MavenDeployer - asm:asm:3.3.1 uploaded successfully
-2017-07-03 23:49:29.934 [main] INFO  apollo.maven.MavenDeployer - asm:asm-analysis:3.2 uploaded successfully
-2017-07-03 23:49:32.685 [main] INFO  apollo.maven.MavenDeployer - asm:asm-commons:3.2 uploaded successfully
-2017-07-03 23:49:35.820 [main] INFO  apollo.maven.MavenDeployer - asm:asm-commons:3.3.1 uploaded successfully
-2017-07-03 23:49:38.462 [main] INFO  apollo.maven.MavenDeployer - asm:asm-parent:3.2 uploaded successfully
-2017-07-03 23:49:41.252 [main] INFO  apollo.maven.MavenDeployer - asm:asm-parent:3.3.1 uploaded successfully
-2017-07-03 23:49:43.989 [main] INFO  apollo.maven.MavenDeployer - asm:asm-tree:3.2 uploaded successfully
-2017-07-03 23:49:47.035 [main] INFO  apollo.maven.MavenDeployer - asm:asm-tree:3.3.1 uploaded successfully
+2017-07-03 23:56:01.156 [main] INFO  apollo.command_line.Main - Welcome To Maven Artifacts Uploader
+2017-07-03 23:56:01.163 [main] INFO  apollo.upload.MavenUploader - Starting to upload artifacts from C:\Users\Ron\.m2\check
+2017-07-03 23:56:03.911 [main] INFO  apollo.maven.MavenDeployer - antlr:antlr:2.7.2 uploaded successfully
+2017-07-03 23:56:06.648 [main] INFO  apollo.maven.MavenDeployer - antlr:antlr:2.7.7 uploaded successfully
+2017-07-03 23:56:09.378 [main] INFO  apollo.maven.MavenDeployer - aopalliance:aopalliance:1.0 uploaded successfully
+2017-07-03 23:56:12.030 [main] INFO  apollo.maven.MavenDeployer - asm:asm:3.2 uploaded successfully
+2017-07-03 23:56:14.506 [main] INFO  apollo.maven.MavenDeployer - asm:asm:3.3.1 uploaded successfully
+2017-07-03 23:56:17.326 [main] INFO  apollo.maven.MavenDeployer - asm:asm-analysis:3.2 uploaded successfully
+2017-07-03 23:56:20.267 [main] INFO  apollo.maven.MavenDeployer - asm:asm-commons:3.2 uploaded successfully

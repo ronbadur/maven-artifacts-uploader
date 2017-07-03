@@ -21,7 +21,7 @@ public class MavenModule extends AbstractModule {
     protected void configure() {
         bind(Uploader.class).to(MavenUploader.class);
         bind(new TypeLiteral<List<MavenDeployOption>>(){}).toProvider(MavenCommandsProvider.class);
-        bind(Invoker.class).to(DefaultInvoker.class);
+        bind(Invoker.class).to(DefaultInvoker.class).asEagerSingleton();
         bind(InvocationRequest.class).toProvider(InvocationRequestProvider.class);
         bind(String.class).annotatedWith(Names.named("deploy-start-command")).toInstance("deploy:deploy-file -q ");
         bind(OptionalArgs.class).asEagerSingleton();
