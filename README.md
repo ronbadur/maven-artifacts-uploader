@@ -1,5 +1,11 @@
-# NexusUploader
-maven and npm package uploader for nexus repository
+# Installition
+First you need to clone the project to your computer
 
+```bash
+git clone https://github.com/ronbadur/maven-artifacts-uploader.git
+```
 
-Command Line Tools for uploading artifacts and packages to Nexus Repository, Coming Soon.
+After you clone the project, add the ```bash bin\ ``` folder to the PATH enviroment variable
+
+# Usage
+
