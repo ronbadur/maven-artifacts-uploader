@@ -1,4 +1,4 @@
-# Installition
+# Installation
 First you need to clone the project to your computer
 
 ```bash
