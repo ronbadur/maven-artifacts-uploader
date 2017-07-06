@@ -18,3 +18,11 @@ Last but not the least, add the direcotry to ``` bin ``` folder to the PATH envi
 
 # Usage
 
+For uploading all the artifacts in specific directory on your computer
+```bash
+mvnUploader -d path/to/your/artifacts
+```
+To get all the options that available 
+```bash
+mvnUploader -h
+```
