@@ -16,11 +16,13 @@ git clone https://github.com/ronbadur/maven-artifacts-uploader.git
 
 5. Add ```<server>``` tag to your maven ```settings.xml``` file, for example:
 ```bash
-<server>
+<servers>
+   <server>
       <id>nexus</id>
       <username>admin</username>
       <password>admin123</password>
-</server>
+    </server>
+ </servers>
 ```
 ## Usage
 
