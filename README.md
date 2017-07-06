@@ -1,14 +1,15 @@
 # Installation
-1.Clone the project to your computer
+
+1. Clone the project to your computer
 
 ```bash
 git clone https://github.com/ronbadur/maven-artifacts-uploader.git
 ```
-2.Run ``` mvn install``` command in the directory of the project
+2. Run ``` mvn install``` command in the directory of the project
 
-3.Fill the repository url and repositroy id fields in ```config.properties``` file under ```conf``` directory
+3. Fill the repository url and repositroy id fields in ```config.properties``` file under ```conf``` directory
 
-4.Add the direcotry to ``` bin ``` folder to the PATH enviroment variable
+4. Add the direcotry to ``` bin ``` folder to the PATH enviroment variable
 
 5. Add ```<server>``` tag to your maven ```settings.xml``` file, for example:
 ```bash
