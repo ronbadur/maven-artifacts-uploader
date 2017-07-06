@@ -1,4 +1,12 @@
-# Installation
+# Maven Artifacts Uploader
+This is a friendly command line tool for uploading artifacts to Nexus 3.x repository
+
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+
+## Installation
 
 1. Clone the project to your computer
 
@@ -19,7 +27,7 @@ git clone https://github.com/ronbadur/maven-artifacts-uploader.git
       <password>admin123</password>
 </server>
 ```
-# Usage
+## Usage
 
 For uploading all the artifacts in specific directory on your computer
 ```bash
@@ -29,3 +37,7 @@ To get all the options that available
 ```bash
 mvnUploader -h
 ```
+
+## Contributing
+By all means! If you have a fix or an improvement, pull requests are welcome. We are also happy to get any feedback.
+
