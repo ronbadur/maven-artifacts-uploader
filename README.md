@@ -1,11 +1,6 @@
 # Maven Artifacts Uploader
 This is a friendly command line tool for uploading artifacts to Nexus 3.x repository
 
-## Table of Contents
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-
 ## Installation
 
 1. Clone the project to your computer
