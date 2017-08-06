@@ -2,6 +2,9 @@ package apollo.xml_handlers;
 
 import org.junit.Test;
 import org.w3c.dom.Element;
+import org.xml.sax.ErrorHandler;
+import org.xml.sax.SAXException;
+import org.xml.sax.SAXParseException;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -24,6 +27,22 @@ public class XmlTagChangerTest {
         String tagOldValue = "test2";
         File fileToTest = getFile("valid-pom.pom");
         DocumentBuilder documentBuilder = documentBuilderFactory.newDocumentBuilder();
+        documentBuilder.setErrorHandler(new ErrorHandler() {
+            @Override
+            public void warning(SAXParseException exception) throws SAXException {
+                System.out.println(exception.getMessage());
+            }
+
+            @Override
+            public void error(SAXParseException exception) throws SAXException {
+                System.out.println(exception.getMessage());
+            }
+
+            @Override
+            public void fatalError(SAXParseException exception) throws SAXException {
+                System.out.println(exception.getMessage());
+            }
+        });
         Element element = documentBuilder.parse(fileToTest).getDocumentElement();
 
         xmlTagChanger = new XmlTagChanger(tagToChange, tagOldValue, newValue);
