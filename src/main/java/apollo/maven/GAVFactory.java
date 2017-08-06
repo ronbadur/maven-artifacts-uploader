@@ -19,7 +19,6 @@ public class GAVFactory {
         this.xmlElementFactory = xmlElementFactory;
     }
 
-
     public GAV createGAV(Path pathToPom){
         Element rootXmlElement = xmlElementFactory.createRootXmlElement(pathToPom);
 
@@ -32,7 +31,6 @@ public class GAVFactory {
 
     private String getDirectChildsByTag(Element el, String sTagName) {
         NodeList allChilds = el.getElementsByTagName(sTagName);
-        List<Element> res = new ArrayList<>();
 
         for (int i = 0; i < allChilds.getLength(); i++) {
             if (allChilds.item(i).getParentNode().equals(el))
