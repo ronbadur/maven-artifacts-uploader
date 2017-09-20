@@ -1,5 +1,6 @@
-package apollo.predicators;
+package predicators;
 
+import apollo.predicators.PomFilePredictor;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TemporaryFolder;

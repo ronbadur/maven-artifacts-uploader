@@ -1,5 +1,6 @@
-package apollo.xml_handlers;
+package xml_handlers;
 
+import apollo.xml_handlers.XmlTagChanger;
 import org.junit.Test;
 import org.w3c.dom.Element;
 import org.xml.sax.ErrorHandler;

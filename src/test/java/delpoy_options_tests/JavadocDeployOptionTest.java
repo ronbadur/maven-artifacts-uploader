@@ -1,6 +1,6 @@
-package apollo.delpoy_options_tests;
+package delpoy_options_tests;
 
-import apollo.deploy_options.SourcesDeployOption;
+import apollo.deploy_options.JavadocDeployOption;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TemporaryFolder;
@@ -12,34 +12,33 @@ import java.util.Optional;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 
-public class SourcesDeployOptionTest {
+public class JavadocDeployOptionTest {
 
     @Rule
     public final TemporaryFolder temporaryFolder = new TemporaryFolder();
 
-    private final String sourcesOption = "-Dsources=";
-    private final SourcesDeployOption sourcesDeployOption = new SourcesDeployOption(sourcesOption);
+    private final String javadocOption = "-Djavadoc=";
+    private final JavadocDeployOption javadocDeployOption = new JavadocDeployOption(javadocOption);
 
 
     @Test
-    public void thereIsNoSources() throws Exception {
+    public void thereIsNoJavadoc() throws Exception {
         File tmpFolder = temporaryFolder.newFolder("test");
         File tmpPom = temporaryFolder.newFile(Paths.get(tmpFolder.getName()).resolve("tmpPom.pom").toString());
 
-        Optional<String> command = sourcesDeployOption.getCommandOption(tmpPom.toPath());
+        Optional<String> command = javadocDeployOption.getCommandOption(tmpPom.toPath());
 
         assertThat(command.isPresent(), is(false));
     }
 
     @Test
-    public void thereIsSources() throws Exception {
+    public void thereIsJavadoc() throws Exception {
         File tmpFolder = temporaryFolder.newFolder("test");
         File tmpPom = temporaryFolder.newFile(Paths.get(tmpFolder.getName()).resolve("tmpPom.pom").toString());
-        File tmpSources = temporaryFolder.newFile(Paths.get(tmpFolder.getName()).resolve("tmpPom-sources.jar").toString());
+        File tmpJavadoc = temporaryFolder.newFile(Paths.get(tmpFolder.getName()).resolve("tmpPom-javadoc.jar").toString());
 
-        Optional<String> command = sourcesDeployOption.getCommandOption(tmpPom.toPath());
+        Optional<String> command = javadocDeployOption.getCommandOption(tmpPom.toPath());
 
-        assertThat(command.get(), is(sourcesOption + tmpSources.toString()));
+        assertThat(command.get(), is(javadocOption + tmpJavadoc.toString()));
     }
-
 }

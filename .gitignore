@@ -1,4 +1,4 @@
-# Created by https://www.gitignore.io/api/java,intellij,maven
+# Created by https://www.gitignore.io/api/java,intellij,apollo.maven
 
 ### Intellij ###
 
@@ -41,8 +41,8 @@ dependency-reduced-pom.xml
 buildNumber.properties
 .mvn/timing.properties
 
-# Exclude maven wrapper
-!/.mvn/wrapper/maven-wrapper.jar
+# Exclude apollo.maven wrapper
+!/.mvn/wrapper/apollo.maven-wrapper.jar
 
 
 ### Java ###

@@ -1,5 +1,6 @@
-package apollo.xml_handlers;
+package xml_handlers;
 
+import apollo.xml_handlers.*;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TemporaryFolder;

@@ -1,4 +1,4 @@
-package apollo.delpoy_options_tests;
+package delpoy_options_tests;
 
 import apollo.deploy_options.RepositoryIdOption;
 import org.junit.Rule;
