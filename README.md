@@ -6,7 +6,7 @@ This is a friendly command line tool for uploading artifacts to Nexus 3.x reposi
 1. Clone the project to your computer
 
 ```bash
-git clone https://github.com/ronbadur/apollo.maven-artifacts-uploader.git
+git clone https://github.com/ronbadur/maven-artifacts-uploader.git
 ```
 2. Run ``` mvn install``` command in the directory of the project
 
@@ -14,7 +14,7 @@ git clone https://github.com/ronbadur/apollo.maven-artifacts-uploader.git
 
 4. Add the direcotry to ``` bin ``` folder to the PATH enviroment variable
 
-5. Add ```<server>``` tag to your apollo.maven ```settings.xml``` file, for example:
+5. Add ```<server>``` tag to your maven ```settings.xml``` file, for example:
 ```bash
 <servers>
    <server>
