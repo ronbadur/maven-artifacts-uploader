@@ -31,6 +31,7 @@ public class MavenDeployer {
         GAV gav = gavFactory.createGAV(pathToPom);
         logger.debug("Executing command - " + commandToExecute);
         invocationRequest.setGoals(Collections.singletonList(commandToExecute));
+        invocationRequest.setMavenOpts("-client -XX:+TieredCompilation -XX:TieredStopAtLevel=1 -Xverify:none");
         MavenInvokerOutputHandler outputHandler = new MavenInvokerOutputHandler();
         invoker.setOutputHandler(outputHandler);
 
@@ -45,7 +46,7 @@ public class MavenDeployer {
 
     private void writeResultToLog(GAV gav, MavenInvokerOutputHandler outputHandler, InvocationResult invocationResult) {
         if (outputHandler.isArtifactExist()){
-            logger.info(gav.toString() + " is already exist in nexus");
+            logger.info(gav.toString() + " already exists in nexus");
         } else if (invocationResult.getExitCode() != 0){
             logger.info("failed to upload - " + gav.toString());
         } else {

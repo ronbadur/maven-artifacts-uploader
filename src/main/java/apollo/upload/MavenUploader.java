@@ -11,6 +11,8 @@ import java.io.IOException;
 import java.io.UncheckedIOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 import java.util.stream.Stream;
 
 public class MavenUploader implements Uploader {
@@ -19,6 +21,8 @@ public class MavenUploader implements Uploader {
     private final MavenDeployer mavenDeployer;
     private final XmlReformer xmlReformer;
     private static final Logger logger = LogManager.getLogger(MavenUploader.class);
+    private static final int maxThreadNo = 8;
+    private static ExecutorService executor = Executors.newFixedThreadPool(maxThreadNo);
 
     @Inject
     public MavenUploader(PomFilePredictor pomFilePredictor, MavenDeployer mavenDeployer, XmlReformer xmlReformer) {
@@ -29,9 +33,13 @@ public class MavenUploader implements Uploader {
 
     @Override
     public void uploadToRepository(Path pathToUpload) {
+
         logger.info("Starting to upload artifacts from " + pathToUpload.toString());
         try (Stream<Path> files = Files.walk(pathToUpload)){
-            files.filter(pomFilePredictor).peek(xmlReformer::prepareXmlToDeploy).forEach(mavenDeployer::deployArtifact);
+            files.filter(pomFilePredictor).peek(xmlReformer::prepareXmlToDeploy).forEach(path -> {
+                Runnable uploadThread = new MavenUploadThread(mavenDeployer, path);
+                executor.submit(uploadThread);
+            });
         } catch (IOException e) {
             throw new UncheckedIOException(e);
         }
