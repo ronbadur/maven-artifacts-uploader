@@ -30,7 +30,7 @@ public class Main {
             logger.info("Welcome To Maven Artifacts Uploader");
             Uploader uploader = injector.getInstance(Uploader.class);
             uploader.uploadToRepository(Paths.get(optionalArgs.getPathToArtifacts()));
-            logger.info("Done to upload all the artifacts!");
+            logger.info("Done uploading all the artifacts!");
         }
     }
 }

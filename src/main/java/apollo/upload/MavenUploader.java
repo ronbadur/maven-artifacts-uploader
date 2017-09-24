@@ -13,6 +13,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 import java.util.stream.Stream;
 
 public class MavenUploader implements Uploader {
@@ -42,6 +43,15 @@ public class MavenUploader implements Uploader {
             });
         } catch (IOException e) {
             throw new UncheckedIOException(e);
+        }
+
+        executor.shutdown();
+        try {
+            if (executor.awaitTermination(5, TimeUnit.DAYS)) {
+                logger.info("Executor service has shut down");
+            }
+        } catch (InterruptedException e) {
+            logger.info("Executor service interrupted");
         }
     }
 }

@@ -48,7 +48,7 @@ public class MavenDeployer {
         if (outputHandler.isArtifactExist()){
             logger.info(gav.toString() + " already exists in nexus");
         } else if (invocationResult.getExitCode() != 0){
-            logger.info("failed to upload - " + gav.toString());
+            logger.info("failed to upload - " + gav.toString() + " reason:" + invocationResult.getExecutionException().getMessage());
         } else {
             logger.info(gav.toString() + " uploaded successfully");
         }
