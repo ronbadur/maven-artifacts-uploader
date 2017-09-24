@@ -37,7 +37,15 @@ public class MavenUploader implements Uploader {
 
         logger.info("Starting to upload artifacts from " + pathToUpload.toString());
         try (Stream<Path> files = Files.walk(pathToUpload)){
-            files.filter(pomFilePredictor).peek(xmlReformer::prepareXmlToDeploy).forEach(path -> {
+            files.filter(pomFilePredictor).filter(path -> {
+                try {
+                    xmlReformer.prepareXmlToDeploy(path);
+                    return true;
+                } catch (Exception e) {
+                    logger.error("Error uploading " + path + " : " + e);
+                    return false;
+                }
+            }).forEach(path -> {
                 Runnable uploadThread = new MavenUploadThread(mavenDeployer, path);
                 executor.submit(uploadThread);
             });
