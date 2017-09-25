@@ -31,6 +31,11 @@ public class MavenDeployer {
         GAV gav = gavFactory.createGAV(pathToPom);
         logger.debug("Executing command - " + commandToExecute);
         invocationRequest.setGoals(Collections.singletonList(commandToExecute));
+        /*
+            -client: The Client VM compiler does not try to execute many of the more complex optimizations performed by the compiler in the Server VM, but in exchange, it requires less time to analyze and compile a piece of code. This means the Client VM can start up faster and requires a smaller memory footprint.
+            -XX:+TieredCompilation -XX:TieredStopAtLevel=1: Perform the basic just-in-time compilation of the code only, this results in faster start-up
+            -Xverify:none: disables class file validation (security/stability feature) and results in a faster start-up time
+         */
         invocationRequest.setMavenOpts("-client -XX:+TieredCompilation -XX:TieredStopAtLevel=1 -Xverify:none");
         MavenInvokerOutputHandler outputHandler = new MavenInvokerOutputHandler();
         invoker.setOutputHandler(outputHandler);
