@@ -1,5 +1,8 @@
 # Created by https://www.gitignore.io/api/java,intellij,apollo.maven
 
+## Exclude config.properties file to prevent upload private configuration to git repository
+src/main/resources/config.properties
+
 ### Intellij ###
 
 .idea/
