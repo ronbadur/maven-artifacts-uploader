@@ -22,7 +22,7 @@ public class MavenUploader implements Uploader {
     private final MavenDeployer mavenDeployer;
     private final XmlReformer xmlReformer;
     private static final Logger logger = LogManager.getLogger(MavenUploader.class);
-    private static final int maxThreadNo = 8;
+    private static final int maxThreadNo = Runtime.getRuntime().availableProcessors();
     private static ExecutorService executor = Executors.newFixedThreadPool(maxThreadNo);
 
     @Inject
