@@ -46,7 +46,7 @@ public class MavenUploader implements Uploader {
                     return false;
                 }
             }).forEach(path -> {
-                Runnable uploadThread = new MavenUploadThread(mavenDeployer, path);
+                Runnable uploadThread = new MavenUploadAsync(mavenDeployer, path);
                 executor.submit(uploadThread);
             });
         } catch (IOException e) {
