@@ -1,5 +1,8 @@
 # Created by https://www.gitignore.io/api/java,intellij,apollo.maven
 
+## Exclude logs
+logs/
+
 ### Intellij ###
 
 .idea/
