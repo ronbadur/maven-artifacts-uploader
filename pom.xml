@@ -9,6 +9,11 @@
     <version>1.0.1</version>
 
     <build>
+        <resources>
+            <resource>
+                <directory>${basedir}/conf</directory>
+            </resource>
+        </resources>
         <testSourceDirectory>src/test/java</testSourceDirectory>
         <testResources>
             <testResource>

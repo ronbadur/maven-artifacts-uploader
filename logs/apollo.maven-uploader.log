@@ -1,0 +1,158 @@
+2017-11-16 23:50:18.051 [main] INFO  apollo.command_line.Main - Welcome To Maven Artifacts Uploader
+2017-11-16 23:51:40.383 [main] INFO  apollo.command_line.Main - Welcome To Maven Artifacts Uploader
+2017-11-17 00:01:51.494 [main] INFO  apollo.command_line.Main - Welcome To Maven Artifacts Uploader
+2017-11-17 00:02:29.612 [main] INFO  apollo.command_line.Main - Welcome To Maven Artifacts Uploader
+2017-11-17 00:02:29.621 [main] INFO  apollo.upload.MavenUploader - Starting to upload artifacts from C:\Users\Ron\.m2\check
+2017-11-17 00:02:35.440 [main] ERROR apollo.upload.MavenUploader - Error uploading C:\Users\Ron\.m2\check\org\codehaus\plexus\plexus\1.0.4\plexus-1.0.4.pom : java.lang.NullPointerException
+2017-11-17 00:02:35.466 [main] ERROR apollo.upload.MavenUploader - Error uploading C:\Users\Ron\.m2\check\org\codehaus\plexus\plexus\1.0.5\plexus-1.0.5.pom : java.lang.NullPointerException
+2017-11-17 00:02:37.357 [main] ERROR apollo.upload.MavenUploader - Error uploading C:\Users\Ron\.m2\check\plexus\plexus-root\1.0.3\plexus-root-1.0.3.pom : java.lang.NullPointerException
+2017-11-17 00:02:40.861 [pool-2-thread-4] INFO  apollo.maven.MavenDeployer - asm:asm-analysis:3.2 already exists in nexus
+2017-11-17 00:02:41.861 [pool-2-thread-3] INFO  apollo.maven.MavenDeployer - asm:asm:3.3.1 already exists in nexus
+2017-11-17 00:02:54.255 [pool-2-thread-2] INFO  apollo.maven.MavenDeployer - asm:asm-commons:3.2 already exists in nexus
+2017-11-17 00:02:55.255 [pool-2-thread-4] INFO  apollo.maven.MavenDeployer - asm:asm-parent:3.2 already exists in nexus
+2017-11-17 00:02:56.255 [pool-2-thread-3] INFO  apollo.maven.MavenDeployer - asm:asm-parent:3.3.1 already exists in nexus
+2017-11-17 00:02:57.255 [pool-2-thread-1] INFO  apollo.maven.MavenDeployer - asm:asm-commons:3.3.1 already exists in nexus
+2017-11-17 00:03:09.615 [pool-2-thread-2] INFO  apollo.maven.MavenDeployer - asm:asm-tree:3.2 already exists in nexus
+2017-11-17 00:03:10.613 [pool-2-thread-1] INFO  apollo.maven.MavenDeployer - backport-util-concurrent:backport-util-concurrent:3.1 already exists in nexus
+2017-11-17 00:03:11.612 [pool-2-thread-4] INFO  apollo.maven.MavenDeployer - asm:asm-tree:3.3.1 already exists in nexus
+2017-11-17 00:03:12.614 [pool-2-thread-3] INFO  apollo.maven.MavenDeployer - asm:asm-util:3.2 already exists in nexus
+2017-11-17 00:03:25.755 [pool-2-thread-2] INFO  apollo.maven.MavenDeployer - ch.qos.logback:logback-classic:1.1.11 already exists in nexus
+2017-11-17 00:03:26.758 [pool-2-thread-1] INFO  apollo.maven.MavenDeployer - ch.qos.logback:logback-classic:1.1.7 already exists in nexus
+2017-11-17 00:03:27.757 [pool-2-thread-4] INFO  apollo.maven.MavenDeployer - ch.qos.logback:logback-core:1.1.11 already exists in nexus
+2017-11-17 00:03:28.756 [pool-2-thread-3] INFO  apollo.maven.MavenDeployer - ch.qos.logback:logback-core:1.1.7 already exists in nexus
+2017-11-17 00:38:14.334 [main] INFO  apollo.command_line.Main - Welcome To Maven Artifacts Uploader
+2017-11-17 00:39:37.148 [main] INFO  apollo.command_line.Main - Welcome To Maven Artifacts Uploader
+2017-11-17 00:39:37.162 [main] INFO  apollo.upload.MavenUploader - Starting to upload artifacts from C:\Users\Ron\.m2\check
+2017-11-17 00:39:45.798 [main] ERROR apollo.upload.MavenUploader - Error uploading C:\Users\Ron\.m2\check\org\codehaus\plexus\plexus\1.0.4\plexus-1.0.4.pom : java.lang.NullPointerException
+2017-11-17 00:39:45.846 [main] ERROR apollo.upload.MavenUploader - Error uploading C:\Users\Ron\.m2\check\org\codehaus\plexus\plexus\1.0.5\plexus-1.0.5.pom : java.lang.NullPointerException
+2017-11-17 00:39:48.713 [main] ERROR apollo.upload.MavenUploader - Error uploading C:\Users\Ron\.m2\check\plexus\plexus-root\1.0.3\plexus-root-1.0.3.pom : java.lang.NullPointerException
+2017-11-17 00:39:48.942 [pool-2-thread-2] INFO  apollo.maven.MavenDeployer - asm:asm:3.2 uploaded successfully
+2017-11-17 00:39:49.940 [pool-2-thread-1] INFO  apollo.maven.MavenDeployer - aopalliance:aopalliance:1.0 uploaded successfully
+2017-11-17 00:39:50.940 [pool-2-thread-4] INFO  apollo.maven.MavenDeployer - asm:asm-analysis:3.2 uploaded successfully
+2017-11-17 00:39:52.943 [pool-2-thread-3] INFO  apollo.maven.MavenDeployer - asm:asm:3.3.1 uploaded successfully
+2017-11-17 00:40:06.942 [pool-2-thread-4] INFO  apollo.maven.MavenDeployer - asm:asm-parent:3.2 uploaded successfully
+2017-11-17 00:40:07.943 [pool-2-thread-2] INFO  apollo.maven.MavenDeployer - asm:asm-commons:3.2 uploaded successfully
+2017-11-17 00:40:08.944 [pool-2-thread-3] INFO  apollo.maven.MavenDeployer - asm:asm-parent:3.3.1 uploaded successfully
+2017-11-17 00:40:09.944 [pool-2-thread-1] INFO  apollo.maven.MavenDeployer - asm:asm-commons:3.3.1 uploaded successfully
+2017-11-17 00:40:23.134 [pool-2-thread-4] INFO  apollo.maven.MavenDeployer - asm:asm-tree:3.2 uploaded successfully
+2017-11-17 00:40:24.135 [pool-2-thread-1] INFO  apollo.maven.MavenDeployer - backport-util-concurrent:backport-util-concurrent:3.1 uploaded successfully
+2017-11-17 00:40:25.134 [pool-2-thread-2] INFO  apollo.maven.MavenDeployer - asm:asm-tree:3.3.1 uploaded successfully
+2017-11-17 00:40:26.136 [pool-2-thread-3] INFO  apollo.maven.MavenDeployer - asm:asm-util:3.2 uploaded successfully
+2017-11-17 00:40:40.216 [pool-2-thread-4] INFO  apollo.maven.MavenDeployer - ch.qos.logback:logback-classic:1.1.11 uploaded successfully
+2017-11-17 00:40:41.216 [pool-2-thread-1] INFO  apollo.maven.MavenDeployer - ch.qos.logback:logback-classic:1.1.7 uploaded successfully
+2017-11-17 00:40:42.217 [pool-2-thread-2] INFO  apollo.maven.MavenDeployer - ch.qos.logback:logback-core:1.1.11 uploaded successfully
+2017-11-17 00:40:43.216 [pool-2-thread-3] INFO  apollo.maven.MavenDeployer - ch.qos.logback:logback-core:1.1.7 uploaded successfully
+2017-11-17 00:40:57.851 [pool-2-thread-1] INFO  apollo.maven.MavenDeployer - ch.qos.logback:logback-parent:1.1.7 uploaded successfully
+2017-11-17 00:40:58.852 [pool-2-thread-4] INFO  apollo.maven.MavenDeployer - ch.qos.logback:logback-parent:1.1.11 uploaded successfully
+2017-11-17 00:41:00.853 [pool-2-thread-2] INFO  apollo.maven.MavenDeployer - com.beust:jcommander:1.69 uploaded successfully
+2017-11-17 00:41:14.616 [pool-2-thread-3] INFO  apollo.maven.MavenDeployer - com.fasterxml:classmate:1.3.1 uploaded successfully
+2017-11-17 00:41:15.614 [pool-2-thread-2] INFO  apollo.maven.MavenDeployer - com.fasterxml.jackson.core:jackson-annotations:2.8.3 uploaded successfully
+2017-11-17 00:41:16.617 [pool-2-thread-4] INFO  apollo.maven.MavenDeployer - com.fasterxml.jackson.core:jackson-annotations:2.8.0 uploaded successfully
+2017-11-17 00:41:17.618 [pool-2-thread-1] INFO  apollo.maven.MavenDeployer - com.fasterxml:classmate:1.3.3 uploaded successfully
+2017-11-17 00:41:32.771 [pool-2-thread-2] INFO  apollo.maven.MavenDeployer - com.fasterxml.jackson.core:jackson-core:2.8.7 uploaded successfully
+2017-11-17 00:41:33.770 [pool-2-thread-1] INFO  apollo.maven.MavenDeployer - com.fasterxml.jackson.core:jackson-databind:2.8.7 uploaded successfully
+2017-11-17 00:41:34.773 [pool-2-thread-4] INFO  apollo.maven.MavenDeployer - com.fasterxml.jackson.core:jackson-databind:2.8.3 uploaded successfully
+2017-11-17 00:41:36.774 [pool-2-thread-3] INFO  apollo.maven.MavenDeployer - com.fasterxml.jackson.core:jackson-core:2.8.3 uploaded successfully
+2017-11-17 00:41:51.453 [pool-2-thread-1] INFO  apollo.maven.MavenDeployer - com.fasterxml.jackson:jackson-parent:2.8 uploaded successfully
+2017-11-17 00:41:52.453 [pool-2-thread-2] INFO  apollo.maven.MavenDeployer - com.fasterxml.jackson:jackson-bom:2.8.7 uploaded successfully
+2017-11-17 00:41:53.453 [pool-2-thread-3] INFO  apollo.maven.MavenDeployer - com.fasterxml:oss-parent:27 uploaded successfully
+2017-11-17 00:41:54.453 [pool-2-thread-4] INFO  apollo.maven.MavenDeployer - com.fasterxml:oss-parent:24 uploaded successfully
+2017-11-17 00:42:09.441 [pool-2-thread-4] INFO  apollo.maven.MavenDeployer - com.google:google:1 uploaded successfully
+2017-11-17 00:42:10.440 [pool-2-thread-3] INFO  apollo.maven.MavenDeployer - com.google.collections:google-collections:1.0 uploaded successfully
+2017-11-17 00:42:11.441 [pool-2-thread-1] INFO  apollo.maven.MavenDeployer - com.google.code.findbugs:jsr305:1.3.9 uploaded successfully
+2017-11-17 00:42:12.443 [pool-2-thread-2] INFO  apollo.maven.MavenDeployer - com.google.code.findbugs:jsr305:2.0.1 uploaded successfully
+2017-11-17 00:42:26.368 [pool-2-thread-4] INFO  apollo.maven.MavenDeployer - com.google:google:5 uploaded successfully
+2017-11-17 00:42:27.368 [pool-2-thread-3] INFO  apollo.maven.MavenDeployer - com.google.guava:guava:11.0.2 uploaded successfully
+2017-11-17 00:42:28.368 [pool-2-thread-1] INFO  apollo.maven.MavenDeployer - com.google.guava:guava:18.0 uploaded successfully
+2017-11-17 00:42:29.367 [pool-2-thread-2] INFO  apollo.maven.MavenDeployer - com.google.guava:guava:19.0 uploaded successfully
+2017-11-17 00:42:42.356 [pool-2-thread-2] INFO  apollo.maven.MavenDeployer - com.google.guava:guava-parent:19.0 uploaded successfully
+2017-11-17 00:42:43.352 [pool-2-thread-1] INFO  apollo.maven.MavenDeployer - com.google.guava:guava-parent:18.0 uploaded successfully
+2017-11-17 00:42:44.353 [pool-2-thread-3] INFO  apollo.maven.MavenDeployer - com.google.guava:guava-parent:11.0.2 uploaded successfully
+2017-11-17 00:42:46.354 [pool-2-thread-4] INFO  apollo.maven.MavenDeployer - com.google.guava:guava:21.0 uploaded successfully
+2017-11-17 00:43:00.675 [pool-2-thread-3] INFO  apollo.maven.MavenDeployer - com.google.inject:guice-parent:4.1.0 uploaded successfully
+2017-11-17 00:43:01.675 [pool-2-thread-2] INFO  apollo.maven.MavenDeployer - com.google.guava:guava-parent:21.0 uploaded successfully
+2017-11-17 00:43:02.675 [pool-2-thread-4] INFO  apollo.maven.MavenDeployer - com.jayway.jsonpath:json-path:2.2.0 uploaded successfully
+2017-11-17 00:43:03.674 [pool-2-thread-1] INFO  apollo.maven.MavenDeployer - com.google.inject:guice:4.1.0 uploaded successfully
+2017-11-17 00:43:18.683 [pool-2-thread-3] INFO  apollo.maven.MavenDeployer - com.jcraft:jsch:0.1.54 uploaded successfully
+2017-11-17 00:43:21.685 [pool-2-thread-1] INFO  apollo.maven.MavenDeployer - com.sparkjava:spark-template-freemarker:2.0.0 uploaded successfully
+2017-11-17 00:43:24.687 [pool-2-thread-4] INFO  apollo.maven.MavenDeployer - com.sparkjava:spark-core:2.2 uploaded successfully
+2017-11-17 00:43:26.688 [pool-2-thread-2] INFO  apollo.maven.MavenDeployer - com.sparkjava:spark-core:2.0.0 uploaded successfully
+2017-11-17 00:43:38.204 [pool-2-thread-1] INFO  apollo.maven.MavenDeployer - com.thoughtworks.xstream:xstream-parent:1.4.3 uploaded successfully
+2017-11-17 00:43:39.204 [pool-2-thread-2] INFO  apollo.maven.MavenDeployer - com.zaxxer:HikariCP:2.6.0 uploaded successfully
+2017-11-17 00:43:40.205 [pool-2-thread-3] INFO  apollo.maven.MavenDeployer - com.thoughtworks.xstream:xstream:1.4.3 uploaded successfully
+2017-11-17 00:43:41.205 [pool-2-thread-4] INFO  apollo.maven.MavenDeployer - com.vaadin.external.google:android-json:0.0.20131108.vaadin1 uploaded successfully
+2017-11-17 00:43:54.039 [pool-2-thread-1] INFO  apollo.maven.MavenDeployer - commons-beanutils:commons-beanutils:1.6 uploaded successfully
+2017-11-17 00:43:55.041 [pool-2-thread-3] INFO  apollo.maven.MavenDeployer - commons-cli:commons-cli:1.0 uploaded successfully
+2017-11-17 00:43:56.040 [pool-2-thread-2] INFO  apollo.maven.MavenDeployer - commons-beanutils:commons-beanutils:1.7.0 uploaded successfully
+2017-11-17 00:43:57.041 [pool-2-thread-4] INFO  apollo.maven.MavenDeployer - commons-cli:commons-cli:1.2 uploaded successfully
+2017-11-17 00:44:09.495 [pool-2-thread-4] INFO  apollo.maven.MavenDeployer - commons-digester:commons-digester:1.8 uploaded successfully
+2017-11-17 00:44:11.434 [pool-2-thread-2] INFO  apollo.maven.MavenDeployer - commons-digester:commons-digester:1.6 uploaded successfully
+2017-11-17 00:44:12.436 [pool-2-thread-1] INFO  apollo.maven.MavenDeployer - commons-codec:commons-codec:1.3 uploaded successfully
+2017-11-17 00:44:14.439 [pool-2-thread-3] INFO  apollo.maven.MavenDeployer - commons-codec:commons-codec:1.6 uploaded successfully
+2017-11-17 00:44:27.805 [pool-2-thread-4] INFO  apollo.maven.MavenDeployer - commons-io:commons-io:1.3.2 uploaded successfully
+2017-11-17 00:44:31.807 [pool-2-thread-3] INFO  apollo.maven.MavenDeployer - commons-io:commons-io:2.4 uploaded successfully
+2017-11-17 00:44:33.808 [pool-2-thread-2] INFO  apollo.maven.MavenDeployer - commons-io:commons-io:1.4 uploaded successfully
+2017-11-17 00:44:34.806 [pool-2-thread-1] INFO  apollo.maven.MavenDeployer - commons-io:commons-io:2.2 uploaded successfully
+2017-11-17 00:44:48.925 [pool-2-thread-2] INFO  apollo.maven.MavenDeployer - commons-logging:commons-logging:1.0.3 uploaded successfully
+2017-11-17 00:44:49.925 [pool-2-thread-3] INFO  apollo.maven.MavenDeployer - commons-logging:commons-logging:1.0 uploaded successfully
+2017-11-17 00:44:50.926 [pool-2-thread-1] INFO  apollo.maven.MavenDeployer - commons-logging:commons-logging:1.0.4 uploaded successfully
+2017-11-17 00:44:51.926 [pool-2-thread-4] INFO  apollo.maven.MavenDeployer - commons-io:commons-io:2.5 uploaded successfully
+2017-11-17 00:45:05.329 [pool-2-thread-2] INFO  apollo.maven.MavenDeployer - commons-logging:commons-logging:1.1 uploaded successfully
+2017-11-17 00:45:06.332 [pool-2-thread-1] INFO  apollo.maven.MavenDeployer - commons-logging:commons-logging:1.2 uploaded successfully
+2017-11-17 00:45:07.331 [pool-2-thread-3] INFO  apollo.maven.MavenDeployer - commons-logging:commons-logging:1.1.1 uploaded successfully
+2017-11-17 00:45:08.332 [pool-2-thread-4] INFO  apollo.maven.MavenDeployer - commons-logging:commons-logging-api:1.1 uploaded successfully
+2017-11-17 00:45:21.593 [pool-2-thread-2] INFO  apollo.maven.MavenDeployer - commons-validator:commons-validator:1.3.1 uploaded successfully
+2017-11-17 00:45:37.917 [pool-2-thread-4] INFO  apollo.maven.MavenDeployer - javax.servlet:servlet-api:2.3 uploaded successfully
+2017-11-17 00:45:38.918 [pool-2-thread-2] INFO  apollo.maven.MavenDeployer - javax.annotation:jsr250-api:1.0 uploaded successfully
+2017-11-17 00:45:39.919 [pool-2-thread-3] INFO  apollo.maven.MavenDeployer - javax.inject:javax.inject:1 uploaded successfully
+2017-11-17 00:45:40.919 [pool-2-thread-1] INFO  apollo.maven.MavenDeployer - javax.enterprise:cdi-api:1.0 uploaded successfully
+2017-11-17 00:45:54.726 [pool-2-thread-3] INFO  apollo.maven.MavenDeployer - javax.validation:validation-api:1.1.0.Final uploaded successfully
+2017-11-17 00:45:55.726 [pool-2-thread-4] INFO  apollo.maven.MavenDeployer - javax.servlet:servlet-api:2.5 uploaded successfully
+2017-11-17 00:45:56.723 [pool-2-thread-1] INFO  apollo.maven.MavenDeployer - jdom:jdom:1.0 uploaded successfully
+2017-11-17 00:45:57.726 [pool-2-thread-2] INFO  apollo.maven.MavenDeployer - javax.transaction:javax.transaction-api:1.2 uploaded successfully
+2017-11-17 00:46:09.804 [pool-2-thread-3] INFO  apollo.maven.MavenDeployer - junit:junit:3.8.1 uploaded successfully
+2017-11-17 00:46:16.808 [pool-2-thread-2] INFO  apollo.maven.MavenDeployer - log4j:log4j:1.2.12 uploaded successfully
+2017-11-17 00:46:17.808 [pool-2-thread-4] INFO  apollo.maven.MavenDeployer - junit:junit:3.8.2 uploaded successfully
+2017-11-17 00:46:18.807 [pool-2-thread-1] INFO  apollo.maven.MavenDeployer - junit:junit:4.12 uploaded successfully
+2017-11-17 00:46:29.981 [pool-2-thread-3] INFO  apollo.maven.MavenDeployer - log4j:log4j:1.2.17 uploaded successfully
+2017-11-17 00:46:34.996 [pool-2-thread-2] INFO  apollo.maven.MavenDeployer - net.bytebuddy:byte-buddy:1.5.5 uploaded successfully
+2017-11-17 00:46:35.986 [pool-2-thread-1] INFO  apollo.maven.MavenDeployer - net.bytebuddy:byte-buddy-agent:1.5.5 uploaded successfully
+2017-11-17 00:46:36.982 [pool-2-thread-4] INFO  apollo.maven.MavenDeployer - net.bytebuddy:byte-buddy:1.6.11 uploaded successfully
+2017-11-17 00:46:51.055 [pool-2-thread-3] INFO  apollo.maven.MavenDeployer - net.bytebuddy:byte-buddy-agent:1.6.11 uploaded successfully
+2017-11-17 00:46:52.054 [pool-2-thread-2] INFO  apollo.maven.MavenDeployer - net.bytebuddy:byte-buddy-parent:1.5.5 uploaded successfully
+2017-11-17 00:46:53.054 [pool-2-thread-4] INFO  apollo.maven.MavenDeployer - net.java:jvnet-parent:3 uploaded successfully
+2017-11-17 00:46:54.056 [pool-2-thread-1] INFO  apollo.maven.MavenDeployer - net.bytebuddy:byte-buddy-parent:1.6.11 uploaded successfully
+2017-11-17 00:47:10.399 [pool-2-thread-4] INFO  apollo.maven.MavenDeployer - net.minidev:minidev-parent:2.2 uploaded successfully
+2017-11-17 00:47:11.400 [pool-2-thread-1] INFO  apollo.maven.MavenDeployer - net.sf.sevenzipjbinding:sevenzipjbinding:9.20-2.00beta uploaded successfully
+2017-11-17 00:47:12.400 [pool-2-thread-2] INFO  apollo.maven.MavenDeployer - net.minidev:json-smart:2.2.1 uploaded successfully
+2017-11-17 00:47:13.401 [pool-2-thread-3] INFO  apollo.maven.MavenDeployer - net.minidev:accessors-smart:1.1 uploaded successfully
+2017-11-17 00:47:31.852 [pool-2-thread-3] INFO  apollo.maven.MavenDeployer - org.apache:apache:10 uploaded successfully
+2017-11-17 00:47:32.876 [pool-2-thread-4] INFO  apollo.maven.MavenDeployer - net.sf.sevenzipjbinding:sevenzipjbinding-all-linux:9.20-2.00beta uploaded successfully
+2017-11-17 00:47:33.856 [pool-2-thread-2] INFO  apollo.maven.MavenDeployer - net.sf.sevenzipjbinding:sevenzipjbinding-linux-i386:9.20-2.00beta uploaded successfully
+2017-11-17 00:47:37.859 [pool-2-thread-1] INFO  apollo.maven.MavenDeployer - net.sf.sevenzipjbinding:sevenzipjbinding-all-platforms:9.20-2.00beta uploaded successfully
+2017-11-17 00:47:55.908 [pool-2-thread-3] INFO  apollo.maven.MavenDeployer - org.apache:apache:11 uploaded successfully
+2017-11-17 00:47:59.910 [pool-2-thread-2] INFO  apollo.maven.MavenDeployer - org.apache:apache:14 uploaded successfully
+2017-11-17 00:48:02.911 [pool-2-thread-1] INFO  apollo.maven.MavenDeployer - org.apache:apache:15 uploaded successfully
+2017-11-17 00:48:04.912 [pool-2-thread-4] INFO  apollo.maven.MavenDeployer - org.apache:apache:13 uploaded successfully
+2017-11-17 00:48:16.954 [pool-2-thread-3] INFO  apollo.maven.MavenDeployer - org.apache:apache:16 uploaded successfully
+2017-11-17 00:48:19.957 [pool-2-thread-2] INFO  apollo.maven.MavenDeployer - org.apache:apache:17 uploaded successfully
+2017-11-17 00:48:23.956 [pool-2-thread-1] INFO  apollo.maven.MavenDeployer - org.apache:apache:18 uploaded successfully
+2017-11-17 00:48:24.957 [pool-2-thread-4] INFO  apollo.maven.MavenDeployer - org.apache:apache:2 uploaded successfully
+2017-11-17 00:48:56.540 [main] INFO  apollo.command_line.Main - Welcome To Maven Artifacts Uploader
+2017-11-17 00:52:41.522 [main] INFO  apollo.command_line.Main - Welcome To Maven Artifacts Uploader
+2017-11-17 00:52:41.528 [main] INFO  apollo.upload.MavenUploader - Starting to upload artifacts from C:\Users\Ron\.m2\check
+2017-11-17 00:52:48.894 [main] ERROR apollo.upload.MavenUploader - Error uploading C:\Users\Ron\.m2\check\org\codehaus\plexus\plexus\1.0.4\plexus-1.0.4.pom : java.lang.NullPointerException
+2017-11-17 00:52:48.919 [main] ERROR apollo.upload.MavenUploader - Error uploading C:\Users\Ron\.m2\check\org\codehaus\plexus\plexus\1.0.5\plexus-1.0.5.pom : java.lang.NullPointerException
+2017-11-17 00:52:49.387 [pool-2-thread-3] INFO  apollo.maven.MavenDeployer - asm:asm:3.3.1 uploaded successfully
+2017-11-17 00:52:51.342 [main] ERROR apollo.upload.MavenUploader - Error uploading C:\Users\Ron\.m2\check\plexus\plexus-root\1.0.3\plexus-root-1.0.3.pom : java.lang.NullPointerException
+2017-11-17 00:52:51.387 [pool-2-thread-1] INFO  apollo.maven.MavenDeployer - aopalliance:aopalliance:1.0 uploaded successfully
+2017-11-17 00:52:52.389 [pool-2-thread-4] INFO  apollo.maven.MavenDeployer - asm:asm-analysis:3.2 uploaded successfully
+2017-11-17 00:52:54.390 [pool-2-thread-2] INFO  apollo.maven.MavenDeployer - asm:asm:3.2 uploaded successfully
+2017-11-17 00:53:06.317 [pool-2-thread-3] INFO  apollo.maven.MavenDeployer - asm:asm-commons:3.2 uploaded successfully
+2017-11-17 00:53:07.315 [pool-2-thread-4] INFO  apollo.maven.MavenDeployer - asm:asm-parent:3.2 uploaded successfully
+2017-11-17 00:53:08.320 [pool-2-thread-2] INFO  apollo.maven.MavenDeployer - asm:asm-parent:3.3.1 uploaded successfully
+2017-11-17 00:53:09.317 [pool-2-thread-1] INFO  apollo.maven.MavenDeployer - asm:asm-commons:3.3.1 uploaded successfully
+2017-11-17 00:53:23.458 [pool-2-thread-3] INFO  apollo.maven.MavenDeployer - asm:asm-tree:3.2 uploaded successfully
+2017-11-17 00:53:24.456 [pool-2-thread-1] INFO  apollo.maven.MavenDeployer - backport-util-concurrent:backport-util-concurrent:3.1 uploaded successfully
+2017-11-17 00:53:25.457 [pool-2-thread-4] INFO  apollo.maven.MavenDeployer - asm:asm-tree:3.3.1 uploaded successfully
+2017-11-17 00:53:26.457 [pool-2-thread-2] INFO  apollo.maven.MavenDeployer - asm:asm-util:3.2 uploaded successfully
