@@ -1,5 +1,5 @@
 # Maven Artifacts Uploader
-This is a friendly command line tool for uploading artifacts to Nexus 3.x repository
+This is a friendly command line tool for uploading a directory of artifacts to Nexus 3.x repository
 
 ## Installation
 
