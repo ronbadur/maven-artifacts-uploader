@@ -14,5 +14,8 @@ public class MavenCommandOptionsModule extends AbstractModule {
         bind(String.class).annotatedWith(Names.named("packagingOption")).toInstance("-Dpackaging=pom");
         bind(String.class).annotatedWith(Names.named("sourcesOption")).toInstance("-Dsources=");
         bind(String.class).annotatedWith(Names.named("javadocOption")).toInstance("-Djavadoc=");
+        bind(String.class).annotatedWith(Names.named("filesOption")).toInstance("-Dfiles=");
+        bind(String.class).annotatedWith(Names.named("classifiersOption")).toInstance("-Dclassifiers=");
+        bind(String.class).annotatedWith(Names.named("typesOption")).toInstance("-Dtypes=");
     }
 }
