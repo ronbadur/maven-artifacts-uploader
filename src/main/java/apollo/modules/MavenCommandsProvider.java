@@ -17,9 +17,10 @@ public class MavenCommandsProvider implements Provider<List<MavenDeployOption>> 
     private final PackagingOption packagingOption;
     private final SourcesDeployOption sourcesDeployOption;
     private final JavadocDeployOption javadocDeployOption;
+    private final ExtraSideArtifactsDeployOption extraSideArtifactsDeployOption;
 
     @Inject
-    public MavenCommandsProvider(PomDeployOption pomDeployOption, FileDeployOption fileDeployOption, RepositoryIdOption repositoryIdOption, UrlDeployOption urlDeployOption, PackagingOption packagingOption, SourcesDeployOption sourcesDeployOption, JavadocDeployOption javadocDeployOption) {
+    public MavenCommandsProvider(PomDeployOption pomDeployOption, FileDeployOption fileDeployOption, RepositoryIdOption repositoryIdOption, UrlDeployOption urlDeployOption, PackagingOption packagingOption, SourcesDeployOption sourcesDeployOption, JavadocDeployOption javadocDeployOption, ExtraSideArtifactsDeployOption extraSideArtifactsDeployOption) {
         this.pomDeployOption = pomDeployOption;
         this.fileDeployOption = fileDeployOption;
         this.repositoryIdOption = repositoryIdOption;
@@ -27,10 +28,11 @@ public class MavenCommandsProvider implements Provider<List<MavenDeployOption>> 
         this.packagingOption = packagingOption;
         this.sourcesDeployOption = sourcesDeployOption;
         this.javadocDeployOption = javadocDeployOption;
+        this.extraSideArtifactsDeployOption = extraSideArtifactsDeployOption;
     }
 
     @Override
     public List<MavenDeployOption> get() {
-        return Arrays.asList(pomDeployOption, fileDeployOption, repositoryIdOption, urlDeployOption, packagingOption, sourcesDeployOption, javadocDeployOption);
+        return Arrays.asList(pomDeployOption, fileDeployOption, repositoryIdOption, urlDeployOption, packagingOption, sourcesDeployOption, javadocDeployOption, extraSideArtifactsDeployOption);
     }
 }
